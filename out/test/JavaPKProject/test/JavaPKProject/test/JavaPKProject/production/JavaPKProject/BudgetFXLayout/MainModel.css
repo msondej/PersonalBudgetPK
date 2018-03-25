@@ -1,0 +1,11 @@
+.SplitPane {
+    -fx-background-image: url("/ImagesFX/555.jpg");
+}
+.button {
+    -fx-border-radius: 12px;
+    -fx-border: 2px solid #4CAF50;
+}
+.button:hover {
+    -fx-background-color: #A5A5A5;
+    -fx-color: white;
+}

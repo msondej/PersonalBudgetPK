@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="900.0" styleClass="BorderPane" stylesheets="@../BudgetFXLayout/ChartModel.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BudgetFXView.ChartModelController">
+   <center>
+      <Pane prefHeight="858.0" prefWidth="845.0" BorderPane.alignment="CENTER">
+         <children>
+            <BarChart fx:id="dailyExpenseBc" layoutX="14.0" layoutY="52.0" legendVisible="false" prefHeight="331.0" prefWidth="464.0" styleClass="default-color0" title="Zestawienie dzienne">
+              <xAxis>
+                <CategoryAxis prefHeight="11.0" prefWidth="391.0" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <BarChart fx:id="weeklyExpenseBc" layoutX="463.0" layoutY="52.0" legendVisible="false" prefHeight="363.0" prefWidth="417.0" styleClass="default-color3" title="Zestawienie tygodniowe">
+               <xAxis>
+                  <CategoryAxis prefHeight="45.0" prefWidth="360.0" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis prefHeight="236.0" prefWidth="28.0" side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <BarChart fx:id="monthlyExpenseBc" layoutX="247.0" layoutY="440.0" legendVisible="false" prefHeight="323.0" prefWidth="433.0" styleClass="default-color1" title="Zestawienie miesięczne">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Button layoutX="409.0" layoutY="781.0" mnemonicParsing="false" onMouseClicked="#goToPreviousScene" prefHeight="25.0" prefWidth="109.0" text="Powrót" />
+         </children>
+         <effect>
+            <BoxBlur height="0.0" width="0.1" />
+         </effect>
+      </Pane>
+   </center>
+</BorderPane>

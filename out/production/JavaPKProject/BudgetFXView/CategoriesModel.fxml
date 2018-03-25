@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BudgetFXView.CategoriesModelController">
+    <center>
+        <SplitPane dividerPositions="0.20100502512562815" orientation="VERTICAL" prefHeight="421.0" prefWidth="637.0" styleClass="SplitPane" stylesheets="@../BudgetFXLayout/CategoriesModel.css" BorderPane.alignment="CENTER">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="91.0" prefWidth="598.0">
+               <children>
+                  <Label fx:id="categoriesLb" alignment="CENTER" layoutX="261.0" layoutY="33.0" prefHeight="31.0" prefWidth="189.0" text="Zarządzaj kategoriami">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></Label>
+               </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="598.0">
+                    <children>
+                        <Button layoutX="424.0" layoutY="86.0" mnemonicParsing="false" onMouseClicked="#addIncomeCategory" prefHeight="26.0" prefWidth="152.0" text="Dodaj" />
+                        <Button layoutX="424.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#deleteExpenseCategory" prefHeight="26.0" prefWidth="152.0" text="Usuń" />
+                        <TextField fx:id="expenseAddCategory" layoutX="234.0" layoutY="126.0" prefHeight="26.0" prefWidth="152.0" />
+                        <TextField fx:id="incomeAddCategory" layoutX="234.0" layoutY="86.0" prefHeight="26.0" prefWidth="152.0" />
+                        <Label fx:id="addLb" alignment="CENTER" layoutX="236.0" layoutY="32.0" prefHeight="31.0" prefWidth="148.0" text="Dodaj kategorię" />
+                        <Label fx:id="deleteLb" alignment="CENTER" layoutX="235.0" layoutY="173.0" prefHeight="31.0" prefWidth="150.0" text="Usuń kategorię" />
+                        <Label alignment="CENTER" layoutX="122.0" layoutY="90.0" text="Przychody" />
+                        <Label alignment="CENTER" layoutX="128.0" layoutY="130.0" text="Wydatki" />
+                        <Label layoutX="122.0" layoutY="223.0" text="Przychody" />
+                        <Label layoutX="128.0" layoutY="271.0" text="Wydatki" />
+                        <ComboBox fx:id="incomeDeleteCategory" layoutX="235.0" layoutY="219.0" onMouseClicked="#displayIncomeItems" prefWidth="150.0" />
+                        <ComboBox fx:id="expenseDeleteCategory" layoutX="235.0" layoutY="267.0" onMouseClicked="#displayExpenseItems" prefWidth="150.0" />
+                  <Button layoutX="424.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#addExpenseCategory" prefHeight="26.0" prefWidth="152.0" text="Dodaj" />
+                  <Button layoutX="424.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#deleteIncomeCategory" prefHeight="26.0" prefWidth="152.0" text="Usuń" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </center>
+</BorderPane>
